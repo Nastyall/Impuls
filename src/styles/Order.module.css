@@ -1,0 +1,188 @@
+.order {
+  width: calc(100% - 324px); 
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.order h2 {
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--light); 
+  margin-bottom: 16px;
+}
+
+.orderForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.orderForm h3 {
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--light);
+  margin-bottom: 12px;
+}
+
+.orderForm label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  color: var(--grey); 
+}
+
+.orderForm input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--dark-sea); 
+  background: var(--bg);
+  color: var(--light);
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 4px;
+}
+
+.orderForm input:focus {
+  outline: none;
+  border-color: var(--violet); 
+}
+
+.orderForm button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: var(--violet); 
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.orderForm button:hover {
+  background: var(--dark-sea); 
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cardContainer {
+  width: 300px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #43cea2, #185a9d); 
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+  justify-content: center;
+  align-items: center;
+}
+
+.type {
+  text-align: right;
+}
+
+.visa {
+  width: 50px;
+  height: auto;
+}
+
+.number {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.name {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.validate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.strip {
+  height: 40px;
+  background: #000;
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+
+.mgn {
+  text-align: right;
+}
+
+.cvv {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  margin-bottom: 5px;
+  color: var(--grey);
+}
+
+.form input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid var(--dark-sea);
+  border-radius: 5px;
+  background: var(--bg);
+  color: var(--light);
+}
+
+.form input:focus {
+  outline: none;
+  border-color: var(--violet);
+}
+
+@media (max-width: 768px) {
+  .order {
+    width: 100%; 
+    padding: 16px;
+  }
+}

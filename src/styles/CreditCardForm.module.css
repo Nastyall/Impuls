@@ -1,0 +1,130 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .cardContainer {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .front,
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    background: var(--bg); 
+    color: var(--light); 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--dark-sea); 
+  }
+  
+  .front {
+    z-index: 2;
+  }
+  
+  .back {
+    transform: rotateY(180deg);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .type {
+    text-align: right;
+  }
+  
+  .visa {
+    width: 50px;
+    height: auto;
+    filter: invert(1); 
+  }
+  
+  .number {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  
+  .name {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
+  .validate {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .strip {
+    height: 40px;
+    background: var(--dark-sea); 
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 0;
+  }
+  
+  .mgn {
+    text-align: right;
+  }
+  
+  .cvv {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form label {
+    margin-bottom: 5px;
+    color: var(--grey); 
+  }
+  
+  .form input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid var(--dark-sea); 
+    border-radius: 5px;
+    background: var(--bg); 
+    color: var(--light); 
+  }
+  
+  .form input:focus {
+    outline: none;
+    border-color: var(--violet); 
+  }
+  
+  @media (max-width: 768px) {
+    .cardContainer {
+      width: 250px;
+      height: 170px;
+    }
+  
+    .form {
+      width: 250px;
+    }
+  }
