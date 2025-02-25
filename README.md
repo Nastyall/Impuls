@@ -7,7 +7,7 @@
 ## Установка и запуск 
 1. Клонируйте репозиторий:
 ```bash
-git clone 
+git clone https://github.com/Nastyall/Impuls.git
 ```
 
 2. Установите react-scripts@latest
